@@ -1,0 +1,26 @@
+[project]
+name = "devoauth2"
+version = "0.0.1"
+description = "OAuth2 server that can be used in development"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi >= 0.99.0",
+    "uvicorn >= 0.22.0",
+    "jwcrypto >= 1.5.0",
+]
+authors = [
+    { name = "Mustafa Gezen", email = "mustafa@rockylinux.org" }
+]
+maintainers = [
+    { name = "Mustafa Gezen", email = "mustafa@rockylinux.org" }
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.scripts]
+devoauth2 = "devoauth2.main:main"
+
+[tool.setuptools.package-data]
+"devoauth2.data" = ["*.json"]
